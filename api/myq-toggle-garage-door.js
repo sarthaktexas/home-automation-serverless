@@ -2,16 +2,16 @@ const MyQ = require('myq-api');
 
 module.exports = (req, res) => {
     const account = new MyQ();
-    account.login(req.body.email, req.body.password)
+    account.login(req.query.email, req.query.password)
         .then(function (result) {
-            let deviceInfo = await account.getDoorState(req.body.serialnumber)
+            let deviceInfo = await account.getDoorState(req.query.serialnumber)
             return deviceInfo.deviceState;
         }).then(function (result) {
             let response;
             if (result === 'closed') {
-                response = await account.setDoorState(req.body.serialnumber, MyQ.actions.door.OPEN);
+                response = await account.setDoorState(req.query.serialnumber, MyQ.actions.door.OPEN);
             } else if (result === 'open') {
-                response = await account.setDoorState(req.body.serialnumber, MyQ.actions.door.CLOSE);
+                response = await account.setDoorState(req.query.serialnumber, MyQ.actions.door.CLOSE);
             }
             res.send(response);
         }).catch(function (error) {

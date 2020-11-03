@@ -2,8 +2,8 @@ const MyQ = require('myq-api');
 
 module.exports = (req, res) => {
     const account = new MyQ();
-    console.log(req.body);
-    account.login(req.body.email, req.body.password)
+    console.log(req.query);
+    account.login(req.query.email, req.query.password)
         .then(async function (result) {
             let devices = await account.getDevices();
             let deviceList = '';
