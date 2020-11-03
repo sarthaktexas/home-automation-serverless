@@ -1,0 +1,15 @@
+{
+  "name": "home-automation-serverless",
+  "version": "0.0.0",
+  "description": "A collection of serverless functions to be used with the iOS Shortcuts app to automate different services.",
+  "dependencies": {
+    "myq-api": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Sarthak Mohanty<sarthaktexas@gmail.com>",
+  "license": "Apache-2.0"
+}
