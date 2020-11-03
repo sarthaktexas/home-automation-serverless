@@ -12,25 +12,25 @@ A collection of serverless functions to be used with the iOS Shortcuts app to au
 
 ### Close Garage Door (`myq-close-garage-door`)
 
-- `username` to login
+- `email` to login
 - `password` to login
 - `serialnumber` of device
 
 ### Open Garage Door (`myq-open-garage-door`)
 
-- `username` to login
+- `email` to login
 - `password` to login
 - `serialnumber` of device
 
 ### Toggle Garage Door (`myq-toggle-garage-door`)
 
-- `username` to login
+- `email` to login
 - `password` to login
 - `serialnumber` of device
 
 ### Get Devices (`myq-get-devices`)
 
-- `username` to login
+- `email` to login
 - `password` to login
 
 &copy; Sarthak Mohanty 2020, Apache-2.0
